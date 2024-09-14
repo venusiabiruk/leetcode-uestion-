@@ -13,7 +13,8 @@ class Solution:
                 return False
             count[char] -= 1
         
-        return True
+        return all(value == 0 for value in count.values())
+
 
             
         
