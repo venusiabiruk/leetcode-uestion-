@@ -1,5 +1,37 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        map = {")":"(","}":"{","]":"["}
+        st = []
+        for c in s:
+            if c not in map:
+                st.append(c)
+            else:
+                if not st:
+                    return False
+                else:
+                    popped = st.pop()
+                    if popped != map[c]:
+                        return False
+        return not st
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         stack = []
         matching_bracket = {')': '(', '}': '{', ']': '['}
         for char in s:
